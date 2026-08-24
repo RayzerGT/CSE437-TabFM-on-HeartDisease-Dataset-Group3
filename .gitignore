@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local-only outputs and notes
+Results/
+*.md
+*.json
+*.txt
+
+# Scratch
+_to_delete/
+*.tar.gz
