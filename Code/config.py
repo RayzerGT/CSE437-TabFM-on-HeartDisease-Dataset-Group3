@@ -3,6 +3,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RAW_DIR = ROOT / "Dataset" / "Raw"
 PREP_DIR = ROOT / "Dataset" / "Preprocessed"
+SPLIT_DIR = ROOT / "Dataset" / "Splits"
 RESULTS_DIR = ROOT / "Results"
 
 RANDOM_SEED = 42
@@ -26,3 +27,5 @@ MISSING_COL_THRESHOLD = 0.50
 IQR_MULTIPLIER = 1.5
 CORRELATION_THRESHOLD = 0.90
 CONTINUOUS_MIN_UNIQUE = 10
+
+TEST_SIZE = 0.20

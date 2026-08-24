@@ -33,6 +33,7 @@ def load():
     df = pd.concat(frames, ignore_index=True)
     for c in COLUMNS:
         df[c] = pd.to_numeric(df[c], errors="coerce")
+    df.insert(0, "id", range(len(df)))
     return df
 
 
@@ -48,13 +49,13 @@ def main():
     df[TARGET] = (df["num"] > 0).astype(int)
     df = df.drop(columns=["num"])
     feats = [c for c in COLUMNS if c != "num"]
-    df[[SITE_COL] + feats + [TARGET]].to_csv(
+    df[["id", SITE_COL] + feats + [TARGET]].to_csv(
         PREP_DIR / "heart_disease_raw.csv", index=False)
 
     miss = df[feats].isna().mean()
     feats = [c for c in feats if miss[c] <= MISSING_COL_THRESHOLD]
 
-    df = df[[SITE_COL] + feats + [TARGET]]
+    df = df[["id", SITE_COL] + feats + [TARGET]]
     df = df.drop_duplicates(subset=feats + [TARGET], keep="first")
     df = df.dropna(subset=feats).reset_index(drop=True)
 
@@ -74,7 +75,7 @@ def main():
     cont = continuous_columns(df, feats)
     df[cont] = (df[cont] - df[cont].mean()) / df[cont].std(ddof=0)
 
-    df[[SITE_COL] + feats + [TARGET]].to_csv(
+    df[["id", SITE_COL] + feats + [TARGET]].to_csv(
         PREP_DIR / "heart_disease_preprocessed.csv", index=False)
 
 
