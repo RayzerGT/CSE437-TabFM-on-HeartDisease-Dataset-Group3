@@ -1,0 +1,16 @@
+model,held_out,n_train,n_test,test_prevalence,roc_auc
+1_tabfm_raw,cleveland,417,284,0.44,0.892
+1_tabfm_raw,hungarian,426,275,0.345,0.8924
+1_tabfm_raw,va,559,142,0.732,0.7482
+2_tabfm_preprocessed,cleveland,417,284,0.44,0.8593
+2_tabfm_preprocessed,hungarian,426,275,0.345,0.8911
+2_tabfm_preprocessed,va,559,142,0.732,0.7678
+3_logistic_regression,cleveland,417,284,0.44,0.8554
+3_logistic_regression,hungarian,426,275,0.345,0.8892
+3_logistic_regression,va,559,142,0.732,0.7816
+4_random_forest,cleveland,417,284,0.44,0.8608
+4_random_forest,hungarian,426,275,0.345,0.8812
+4_random_forest,va,559,142,0.732,0.7763
+5_xgboost,cleveland,417,284,0.44,0.8556
+5_xgboost,hungarian,426,275,0.345,0.8708
+5_xgboost,va,559,142,0.732,0.7732

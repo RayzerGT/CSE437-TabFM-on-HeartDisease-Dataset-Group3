@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Test-set performance. The baseline is a prior-probability predictor.}
+\label{tab:results}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+ & ROC-AUC & PR-AUC & Accuracy & Precision & Recall & F1 & MCC & Brier & Seconds \\
+Model &  &  &  &  &  &  &  &  &  \\
+\midrule
+TabFM (raw) & 0.953 & 0.945 & 0.872 & 0.862 & 0.862 & 0.862 & 0.743 & 0.088 & 138.194 \\
+TabFM (preprocessed) & 0.939 & 0.933 & 0.830 & 0.836 & 0.785 & 0.809 & 0.657 & 0.102 & 99.293 \\
+Logistic regression & 0.941 & 0.937 & 0.837 & 0.850 & 0.785 & 0.816 & 0.672 & 0.101 & 4.202 \\
+Random forest & 0.933 & 0.918 & 0.837 & 0.850 & 0.785 & 0.816 & 0.672 & 0.113 & 3.548 \\
+XGBoost & 0.933 & 0.923 & 0.830 & 0.848 & 0.769 & 0.806 & 0.658 & 0.110 & 1.323 \\
+\bottomrule
+\end{tabular}
+\end{table}

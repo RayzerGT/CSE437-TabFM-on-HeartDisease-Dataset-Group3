@@ -7,9 +7,6 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Local-only outputs and notes
-figures/
-*.md
 
 # Scratch
 _to_delete/

@@ -1,0 +1,6 @@
+Model,False negatives,False positives,Missed-disease rate
+TabFM (raw),9,9,0.138
+TabFM (preprocessed),14,10,0.215
+Logistic regression,14,9,0.215
+Random forest,14,9,0.215
+XGBoost,15,9,0.231

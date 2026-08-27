@@ -1,0 +1,6 @@
+model,cleveland,hungarian,va,mean,worst,drop_vs_random_split
+TabFM (raw),0.892,0.8924,0.7482,0.844,0.7482,0.109
+TabFM (preprocessed),0.8593,0.8911,0.7678,0.839,0.7678,0.1
+Logistic regression,0.8554,0.8892,0.7816,0.842,0.7816,0.099
+Random forest,0.8608,0.8812,0.7763,0.839,0.7763,0.094
+XGBoost,0.8556,0.8708,0.7732,0.833,0.7732,0.1

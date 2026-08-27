@@ -1,0 +1,9 @@
+model,hyperparameter,values searched,candidates
+Logistic regression,C,"0.01, 0.1, 1, 10, 100",5
+Random forest,n_estimators,"300, 600",12
+Random forest,max_depth,"None, 4, 8",12
+Random forest,min_samples_leaf,"1, 3",12
+XGBoost,max_depth,"2, 3, 5",24
+XGBoost,learning_rate,"0.03, 0.1",24
+XGBoost,n_estimators,"200, 500",24
+XGBoost,subsample,"0.8, 1.0",24
