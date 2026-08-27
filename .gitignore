@@ -11,8 +11,6 @@ Thumbs.db
 figures/
 models/
 *.md
-*.json
-*.txt
 
 # Scratch
 _to_delete/
